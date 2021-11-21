@@ -1,0 +1,847 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styleo.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+        * {
+            font-family: "Montserrat", sans-serif;
+        }
+
+        #home {
+            display: flex;
+            flex-direction: column;
+            padding: 3px 200px;
+            height: 100px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #home::before {
+            content: "";
+            background: url('background_img.jpeg') no-repeat center center/cover;
+            position: absolute;
+            height: 450px;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.89;
+        }
+
+        h2 {
+            position: relative;
+            top: 190px;
+            font-size: 50px;
+            text-align: center;
+        }
+
+        .services {
+            position: relative;
+            top: 200px;
+            font-size: 20px;
+        }
+
+        body {
+            background: url('../bg2.jpg') no-repeat center center/cover;
+            height: 1250px;
+        }
+
+        .electro,
+        .carp,
+        .elec,
+        .plumber {
+            margin: 40px;
+            text-align: center;
+        }
+
+        .all1 {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .all2 {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'left footer footer footer footer';
+            grid-gap: 10px;
+            background-color: #000000;
+            padding: 10px;
+            position: relative;
+            top: 333px;
+            height: 150px;
+        }
+
+        .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .h-primary {
+            font-size: 3rem;
+            padding: 12px;
+        }
+
+        .h-secondary {
+            font-size: 2.5rem;
+            padding: 12px;
+        }
+
+        .btn {
+            padding: 6px 20px;
+            border: 2px solid white;
+            border-radius: 10px;
+            margin: 17px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        #Register_icon {
+            position: relative;
+            left: -10px;
+        }
+
+        .position-sticky {
+            position: fixed;
+            width: 100%;
+        }
+
+        .hm {
+            position: relative;
+            top: 180px;
+            display: flex;
+        }
+
+        .active1 {
+            border: none;
+            background-color: black;
+            color: gray;
+            position: relative;
+            top: 14px;
+            cursor: pointer;
+        }
+
+        .active2 {
+            border: none;
+            background-color: black;
+            color: gray;
+            position: relative;
+            top: 14px;
+            cursor: pointer;
+        }
+
+        .active3 {
+            border: none;
+            background-color: black;
+            color: gray;
+            position: relative;
+            top: 14px;
+            cursor: pointer;
+        }
+
+        .active4 {
+            border: none;
+            background-color: black;
+            color: gray;
+            position: relative;
+            top: 14px;
+            cursor: pointer;
+        }
+
+        .hi {
+            position: relative;
+            top: -60px;
+            flex: 30%;
+        }
+
+        .ht {
+            position: relative;
+            top: -20px;
+            left: -100px;
+            flex: 70%;
+            width: 300px;
+        }
+
+        footer {
+            background: gray;
+            height: auto;
+            width: 100vw;
+            padding-top: 40px;
+            color: #fff;
+            position: relative;
+            top: 400px;
+        }
+
+        .footer1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .footer1 h3 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            text-transform: capitalize;
+            line-height: 3rem;
+        }
+
+        .footer1 p {
+            max-width: 500px;
+            margin: 10px auto;
+            line-height: 28px;
+            font-size: 14px;
+        }
+
+        .social {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem 0 3rem 0;
+        }
+
+        .social li {
+            margin: 0 10px;
+            color: white;
+
+        }
+
+        .social a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .social a i {
+            font-size: 1.1em;
+            color: black;
+        }
+
+        .social a:hover i {
+            color: aqua;
+        }
+
+        .foot {
+            background: #000;
+            width: 100vw;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .foot p {
+            font-size: 14px;
+            word-spacing: 2px;
+            text-transform: capitalize;
+
+        }
+
+        .foot span {
+            text-transform: uppercase;
+            opacity: .4;
+            font-weight: 200;
+        }
+
+        #h3 {
+            font-size: 30px;
+            position: relative;
+            left: -100px;
+            top: -50px;
+        }
+
+        #Login_icon {
+            position: relative;
+            left: 1000px;
+            top: 15px;
+        }
+
+        @media(max-width:1090px) {
+            #h3 {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 15px;
+                word-wrap: break-word;
+            }
+
+            .all1 {
+                display: block;
+                position: relative;
+                left: 200px;
+            }
+
+            .all2 {
+                display: block;
+                position: relative;
+                left: 200px;
+            }
+
+        }
+
+        @media(max-width:1268px) {
+            #Login_icon {
+                left: 750px;
+            }
+        }
+
+        @media(max-width:992px) {
+            #h3 {
+                font-size: 20px;
+            }
+
+            .hi {
+                position: relative;
+                left: 100px;
+            }
+
+            .all1 {
+                position: relative;
+                left: 80px;
+            }
+
+            .all2 {
+                position: relative;
+                left: 80px;
+            }
+
+            .h2 {
+                position: relative;
+                left: 50px;
+            }
+
+        }
+
+        @media(max-width:873px) {
+            #Register_icon {
+                position: relative;
+                left: 750px;
+                top: -25px;
+            }
+
+            #buttons {
+                position: relative;
+                left: 20px;
+            }
+
+            nav {
+                height: 60px;
+            }
+
+            #h3 {
+                position: relative;
+                right: 400px;
+                top: 20px;
+            }
+
+            h2 {
+                position: relative;
+                left: 200px;
+            }
+        }
+
+        @media(max-width:735px) {
+            #Register_icon {
+                position: relative;
+                left: 100px;
+            }
+        }
+
+        #Register_icon {
+            position: relative;
+            top: -30px;
+        }
+
+        nav {
+            height: 50px;
+        }
+
+        #b1 {
+            background-color: black;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="position-sticky">
+        <nav class="navbar navbar-inverse">
+            <ul class="nav navbar-nav" id="buttons"/
+                <button class="active1">
+                    <a href="home.html">Home</a>
+                </button>
+                <button onclick=About_function() class="active2">
+                    About
+                </button>
+                <button class="active3" onclick=Service_function()>
+                    Services
+                </button>
+                <button class="active4" onclick=Contact_function()>
+                    Contact
+                </button>
+            </ul>
+            <ul>
+                <li id="Login_icon">
+                    <button id="b1" onclick="Confirm()">
+                    <a href="#">
+                            <span class="glyphicon glyphicon-log-in">
+                            </span> Login
+                    </a>    
+                </button>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li id="Register_icon"><a href="#"><button id="b2" onclick="Confirm_regster()"><span
+                                class="glyphicon glyphicon-user"></span> Register</a></button></li>
+            </ul>
+    </div>
+    </nav>
+    </div>
+    <section id="home">
+        <div class="hm">
+            <div class="ht">
+                <h3 id="h3">On demand essential services at your doorstep.
+
+                </h3>
+            </div>
+            <div class="hi">
+                <img src="logo.jpeg" alt="...">
+            </div>
+        </div>
+    </section>
+    <div class="shadow p-3 mb-5 bg-white rounded">
+        <h2>Our Services</h2>
+    </div>
+    <section class="services">
+        <div class="all1">
+            <div class="carp" style="height:400px;">
+                <div class="card" style="width: 50rem;height:500px;">
+                    <img src="https://img.icons8.com/ios/100/000000/carpenter.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">CARPENTERS</h3>
+                        <p class="card-text"> Get quality carpenter services at your door step within 90 mins.
+                            30 day post services guarantee.
+                        </p>
+                        <a href="http://localhost/sem3MiniProject/submit_carpentry_1.php" class="btn btn-primary">BOOK
+                            NOW</a>
+                    </div>
+                </div>
+            </div>
+            <div class="elec">
+                <div class="card" style="width: 50rem;">
+                    <img src="https://img.icons8.com/external-itim2101-lineal-itim2101/100/000000/external-electrician-male-occupation-avatar-itim2101-lineal-itim2101.png"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">ELECTRICIANS</h3>
+                        <p class="card-text">Get installation services, electrical wiring , repairs and fixes of all
+                            house hold electrical appliances.
+                        </p>
+                        <a href="http://localhost/sem3MiniProject/submit_electricals_1.php" class="btn btn-primary">BOOK
+                            NOW</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="all2">
+            <div class="electro">
+                <div class="card" style="width: 50rem;">
+                    <img src="https://img.icons8.com/external-itim2101-lineal-itim2101/100/000000/external-technician-male-occupation-avatar-itim2101-lineal-itim2101.png"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">ELECTRONICS</h3>
+                        <p class="card-text">Get tech support for your laptops, PCs and all electronic devices at your
+                            convenient time slot.</p>
+                        <a href="http://localhost/sem3MiniProject/submit_electronics_1.php" class="btn btn-primary">BOOK
+                            NOW</a>
+                    </div>
+                </div>
+            </div>
+            <div class="plumber">
+                <div class="card" style="width: 50rem;">
+                    <img src="https://img.icons8.com/ios/100/000000/plumber.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">PLUMBERS</h3>
+                        <p class="card-text">Get pipe/tap fitting and water leakages fixed within 90 mins. 30 days post
+                            service guarantee.</p>
+                        <a href="http://localhost/sem3MiniProject/submit_plumbing_1.php" class="btn btn-primary">BOOK
+                            NOW</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+
+        <div class="footer1">
+
+            <h3>website name</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum nulla veniam voluptates totam debitis.
+            </p>
+
+            <ul class="social">
+                <li><a href="#"><i class="fa fa-facebook"><img
+                                src="https://img.icons8.com/ios-glyphs/60/000000/youtube-play.png" /></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"><img
+                                src="https://img.icons8.com/ios-glyphs/60/000000/facebook-new.png" /></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"><img
+                                src="https://img.icons8.com/ios-glyphs/60/000000/twitter--v2.png" /></i></a></li>
+            </ul>
+
+        </div>
+        <div class="foot">
+            <p>copyright &copy;2021 websiteName.designed by <span>167,172</span></p>
+        </div>
+    </footer>
+    <script>
+        function About_function() {
+            window.scrollTo(0, 800);
+        }
+        function Service_function() {
+            window.scrollTo(0, 250);
+        }
+        function Confirm() {
+            var con = confirm("If you are admin click ok");
+            if (con != false) {
+                window.location.replace("http://localhost/sem3MiniProject/Admin_page.php");
+            }
+            else {
+                wnidow.location.replace("home.html");
+            }
+        }
+        function Confirm_register() {
+            if (confirm("If you are unemployed and want to work as service man click ok")) {
+                window.location.replace("Register_unemployed.html");
+            }
+        }
+    </script>
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="home.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- <link rel="stylesheet" href="css/styleo.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+    <style>
+        .image {
+            position: relative;
+            width: 900px;
+            height: 450px;
+            border-radius: 30px;
+        }
+
+        .image__img {
+            display: block;
+            width: 900px;
+            height: 450px;
+            border-radius: 30px;
+        }
+
+        .image__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+            font-family: 'Quicksand', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.25s;
+            border-radius: 30px;
+        }
+
+        .image__overlay--blur {
+            backdrop-filter: blur(5px);
+        }
+
+        .image__overlay--primary {
+
+            color: rgba(238, 220, 220, 0.5);
+
+        }
+
+        .image__overlay>* {
+            transform: translateY(20px);
+            transition: transform 0.25s;
+        }
+
+        .image__overlay:hover {
+            opacity: 1;
+        }
+
+        .image__overlay:hover>* {
+            transform: translateY(0);
+        }
+
+        .image__title {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .image__description {
+            font-size: 1.25em;
+            margin-top: 0.25em;
+        }
+
+
+
+
+
+
+        .r1 {
+            display: flex;
+            justify-content: space-evenly;
+            flex-grow: 2px;
+        }
+
+        .r2 {
+            display: flex;
+            position: relative;
+            justify-content: space-evenly;
+        }
+
+        .homeC {
+            width: 1400px;
+            height: 400px;
+            padding: 20px;
+            margin: 100px auto;
+            box-shadow: 0px 0px 10px 2px grey;
+
+            background-image: url(Chome.jfif);
+        }
+        #Register_icon{
+            position: relative;
+            top:-30px;
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <!--NAV BAR -->
+    <div class="position-sticky" id="">
+        <nav class="navbar navbar-inverse">
+
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Register</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li id="Register_icon"><a href="#"><button id="b2" onclick="Confirm_regster()"><span
+                    class="glyphicon glyphicon-user"></span> Register</a></button></li>
+                <li id="Login_icon">
+                    <button id="b1" onclick="Confirm()">
+                    <a href="#">
+                            <span class="glyphicon glyphicon-log-in">
+                            </span> Login
+                    </a>    
+                </button>
+                </li>
+            </ul>
+    </div>
+    </nav>
+    </div>
+
+    <!-- HOME-->
+
+    <h1 id="h3">On demand essential services at your doorstep.
+
+    </h1>
+
+
+    <section id="home">
+
+
+        <div class="shadow p-3 mb-5 bg-white rounded a">
+            <h2>Our Services</h2>
+        </div>
+
+
+
+        <div class="hm">
+
+            <div class="main">
+                <div class="r1">
+                    <div class="c1"> <img src="https://img.icons8.com/ios/100/000000/carpenter.png" class="card-img-top" alt="..."> </div>
+                    <div class="c2"> <img src="https://img.icons8.com/external-itim2101-lineal-itim2101/100/000000/external-electrician-male-occupation-avatar-itim2101-lineal-itim2101.png" class="card-img-top" alt="..."> </div>
+                </div>
+
+                <div class="r2">
+                    <div class="c3"> <img src="https://img.icons8.com/external-itim2101-lineal-itim2101/100/000000/external-technician-male-occupation-avatar-itim2101-lineal-itim2101.png" class="card-img-top" alt="..."> </div>
+                    <div class="c4"> <img src="https://img.icons8.com/ios/100/000000/plumber.png" class="card-img-top" alt="..."> </div>
+                </div>
+
+            </div>
+
+
+
+
+    </section>
+
+
+    <!-- SERVICES-->
+
+
+    <div id="section1" class="container-fluid">
+        <div class="image">
+
+            <img class="image__img" src="carp.png" alt="Bricks">
+            <div class="image_overlay image_overlay--primary">
+                <div class="image__title">
+                    <h1>Carpenters</h1>
+                </div>
+                <p class="image__description">
+
+                <div class="container">
+                    <h3>Get quality carpenter services at your door step within 90 mins.
+                        30 day post services guarantee.</h3>
+
+                    <a href="http://localhost/sem3MiniProject/submit_carpentry_1.php"><button>Book Now</button></a>
+
+
+                </div>
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div id="section2" class="container-fluid">
+        <div class="image">
+            <img class="image__img" src="elec.png" alt="Bricks">
+            <div class="image_overlay image_overlay--primary">
+                <div class="image__title">
+                    <h1>Plumbers</h1>
+                </div>
+                <p class="image__description">
+                <div class="container">
+                    <h3>Get pipe/tap fitting and water leakages fixed within 90 mins. 30 days post
+                        service guarantee.</h3>
+                    <a href="http://localhost/sem3MiniProject/submit_plumbing_1.php"><button>Book Now</button></a>
+                </div>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="section3" class="container-fluid">
+        <div class="image">
+            <img class="image__img" src="electro.png" alt="Bricks">
+            <div class="image_overlay image_overlay--primary">
+                <div class="image__title">
+                    <h1>Electricians</h1>
+                </div>
+                <p class="image__description">
+
+                <div class="container">
+                    <h3>Get installation services, electrical wiring , repairs and fixes of all
+                        house hold electrical appliances.</h3>
+                    <a href="http://localhost/sem3MiniProject/submit_electricals_1.php"><button>Book Now</button></a>
+                </div>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="section4" class="container-fluid" class="forth">
+        <div class="image">
+            <img class="image__img" src="plumber.png" alt="Bricks">
+            <div class="image_overlay image_overlay--primary">
+                <div class="image__title">
+                    <h1>Electronics</h1>
+                </div>
+                <p class="image__description">
+
+                <div class="container">
+                    <h3>Get tech support for your laptops, PCs and all electronic devices at your
+                        convenient time slot.</h3>
+
+                    <a href="http://localhost/sem3MiniProject/submit_electronics_1.php"><button>Book Now</button></a>
+
+
+                </div>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER-->
+    <footer>
+        <div class="footer1">
+            <h3>website name</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum nulla veniam voluptates totam debitis.
+            </p>
+
+            <ul class="social">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+            </ul>
+        </div>
+        <div class="foot">
+            <p>copyright &copy;2021 websiteName.designed by <span>167,172</span></p>
+        </div>
+    </footer>
+    <script>
+        function Confirm() {
+            var con = confirm("If you are admin click ok");
+            if (con != false) {
+                window.location.replace("http://localhost/sem3MiniProject/Admin_page.php");
+            }
+            else {
+                wnidow.location.replace("home.html");
+            }
+        }
+        function Confirm_register() {
+            if (confirm("If you are unemployed and want to work as service man click ok")) {
+                window.location.replace("Register_unemployed.html");
+            }
+        }
+    </script>
+</body>
+
+</html>
