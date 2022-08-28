@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/styleo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .image {
+            position: relative;
+            width: 900px;
+            height: 450px;
+            border-radius: 30px;
+        }
+        .image__img {
+            display: block;
+            width: 900px;
+            height: 450px;
+            border-radius: 30px;
+        }
+        .image__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+            font-family: 'Quicksand', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.25s;
+            border-radius: 30px;
+        }
+
+        .image__overlay--blur {
+            backdrop-filter: blur(5px);
+        }
+
+        .image__overlay--primary {
+
+            color: rgba(238, 220, 220, 0.5);
+
+        }
+        .image__overlay>* {
+            transform: translateY(20px);
+            transition: transform 0.25s;
+        }
+        .image__overlay:hover {
+            opacity: 1;
+        }
+        .image__overlay:hover>* {
+            transform: translateY(0);
+        }
+        .image__title {
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .image__description {
+            font-size: 1.25em;
+            margin-top: 0.25em;
+        }
+        .r1 {
+            display: flex;
+            justify-content: space-evenly;
+            flex-grow: 2px;
+        }
+        .r2 {
+            display: flex;
+            position: relative;
+            justify-content: space-evenly;
+        }
+        .homeC {
+            width: 1400px;
+            height: 400px;
+            padding: 20px;
+            margin: 100px auto;
+            box-shadow: 0px 0px 10px 2px grey;
+            background-image: url(Chome.jfif);
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+        * {
+            font-family: "Montserrat", sans-serif;
+        }
+        li {
+            list-style-type: none;
+        }
+        .homelist {
+            display: flex;
+        }
+        #home::before {
+            content: "";
+            background: url(bgg.jpg);
+            position: absolute;
+            height: 450px;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.89;
+        }
+        .container {
+            padding-top: 50px;
+            margin: 0 auto;
+            width: 100%;
+            text-align: center;
+        }
+        button {
+            padding: 6px 20px;
+            border: 2px solid white;
+            border-radius: 15px;
+            color: black;
+            margin: 17px;
+        }
+        h2 {
+            position: relative;
+            top: 190px;
+            font-size: 50px;
+            text-align: center;
+        }
+        #h3 {
+            position: relative;
+            top: 10px;
+            font-size: 50px;
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+        .a {
+            position: relative;
+            top: 190px;
+            font-size: 50px;
+            text-align: center;
+        }
+        #section1 {
+            position: relative;
+            left: 300px;
+            top: 200px;
+        }
+
+        #section2 {
+            position: relative;
+            left: 300px;
+            top: 250px;
+        }
+
+        #section3 {
+            position: relative;
+            left: 300px;
+            top: 300px;
+        }
+
+        #section4 {
+            position: relative;
+            left: 300px;
+            top: 350px;
+        }
+
+        body {
+            background-color: #b07c4f;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ba8e4a' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+        }
+
+        .electro,
+        .carp,
+        .elec,
+        .plumber {
+
+            margin: 40px;
+            text-align: center;
+        }
+
+        .all1 {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .all2 {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'left footer footer footer footer';
+            grid-gap: 10px;
+            background-color: #000000;
+            padding: 10px;
+            position: relative;
+            top: 333px;
+            height: 150px;
+        }
+
+        .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        footer {
+            background: #111;
+            height: auto;
+            width: 100vw;
+            padding-top: 40px;
+            color: #fff;
+            position: relative;
+            top: 400px;
+        }
+
+        .footer1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .footer1 h3 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            text-transform: capitalize;
+            line-height: 3rem;
+        }
+
+        .footer1 p {
+            max-width: 500px;
+            margin: 10px auto;
+            line-height: 28px;
+            font-size: 14px;
+        }
+
+        .social {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem 0 3rem 0;
+        }
+
+        .social li {
+            margin: 0 10px;
+
+        }
+
+        .social a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .social a i {
+            font-size: 1.1rem;
+        }
+
+        .social a:hover i {
+            color: aqua;
+        }
+
+        .foot {
+            background: #000;
+            width: 100vw;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .foot p {
+            font-size: 14px;
+            word-spacing: 2px;
+            text-transform: capitalize;
+
+        }
+
+        .foot span {
+            text-transform: uppercase;
+            opacity: .4;
+            font-weight: 200;
+        }
+
+        .h-primary {
+            font-size: 3rem;
+            padding: 12px;
+        }
+
+        .h-secondary {
+
+            font-size: 2.5rem;
+            padding: 12px;
+        }
+
+        .btn {
+            padding: 6px 20px;
+            border: 2px solid white;
+            border-radius: 10px;
+            margin: 17px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .xyz {
+            text-align: center;
+        }
+
+        #b1 {
+            background-color: black;
+            border: none;
+            position: relative;
+            top: -8px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--NAV BAR -->
+    <div class="position-sticky">
+        <nav class="navbar navbar-inverse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Register</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><button id='b1' onclick="Confirm_register()"><a href="#"><span
+                                class="glyphicon glyphicon-log-in"></span>
+                            Register</a></button></li>
+                <li><button id='b1' onclick="Confirm()"><a href="#"><span class="glyphicon glyphicon-log-in"></span>
+                            Login</a></button></li>
+            </ul>
+    </div>
+    </nav>
+    </div>
+    <h1 id="h3">On demand essential services at your doorstep.
+    </h1>
+    <section id="home">
+        <div class="shadow p-3 mb-5 bg-white rounded a">
+            <h2>Our Services</h2>
+        </div>
+        <div class="hm">
+            <div class="main">
+                <div class="r1">
+                    <div class="c1"> <img src="https://img.icons8.com/ios/100/000000/carpenter.png" class="card-img-top"
+                            alt="..."> </div>
+                    <div class="c2"> <img
+                            src="https://img.icons8.com/external-itim2101-lineal-itim2101/100/000000/external-electrician-male-occupation-avatar-itim2101-lineal-itim2101.png"
+                            class="card-img-top" alt="..."> </div>
+                </div>
+                <div class="r2">
+                    <div class="c3"> <img
+                            src="https://img.icons8.com/external-itim2101-lineal-itim2101/100/000000/external-technician-male-occupation-avatar-itim2101-lineal-itim2101.png"
+                            class="card-img-top" alt="..."> </div>
+                    <div class="c4"> <img src="https://img.icons8.com/ios/100/000000/plumber.png" class="card-img-top"
+                            class="card-img-top" alt="..."> </div>
+                </div>
+            </div>
+    </section>
+    <div id="section1" class="container-fluid">
+        <div class="image">
+            <img class="image__img" src="carp.png" alt="Bricks">
+            <div class="image__overlay image__overlay--primary">
+                <div class="image__title">
+                    <h1>Carpenters</h1>
+                </div>
+                <p class="image__description">
+                <h3 class="xyz">Get quality carpenter services at your door step within 90 mins.
+                    30 day post services guarantee.</h3>
+                <a href="http://localhost/sem3MiniProject/submit_carpentry_1.php"><button>Book Now</button></a> .
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="section2" class="container-fluid">
+        <div class="image">
+            <img class="image__img" src="plumber.png" alt="Bricks">
+            <div class="image__overlay image__overlay--primary">
+                <div class="image__title">Plumber</div>
+                <p class="image__description">
+                <h3 class="xyz">Get pipe/tap fitting and water leakages fixed within 90 mins. 30 days post
+                    service guarantee.</h3>
+
+                <a href="http://localhost/sem3MiniProject/submit_plumbing_1.php"><button>Book Now</button></a> .
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="section3" class="container-fluid">
+        <div class="image">
+            <img class="image__img" src="elec.png" alt="Bricks">
+            <div class="image__overlay image__overlay--primary">
+                <div class="image__title">ELECTRICIANS</div>
+                <p class="image__description">
+                <h3 class="xyz">Get installation services, electrical wiring , repairs and fixes of all
+                    house hold electrical appliances.</h3>
+
+                <a href="http://localhost/sem3MiniProject/submit_electricals_1.php"><button>Book Now</button></a> .
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="section4" class="container-fluid">
+        <div class="image">
+            <img class="image__img" src="electro.png" alt="Bricks">
+            <div class="image__overlay image__overlay--primary">
+                <div class="image__title">Electronics</div>
+                <p class="image__description">
+                <h3 class="xyz">Get tech support for your laptops, PCs and all electronic devices at your
+                    convenient time slot.</h3>
+
+                <a href="http://localhost/sem3MiniProject/submit_electronics_1.php"><button>Book Now</button></a> .
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer>
+        <div class="footer1">
+            <h3>CEEP Services</h3>
+            <p>Our ultimate goal is to provide some relief to community people causing due to small problems in their houses.
+            </p>
+            <ul class="social">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+            </ul>
+        </div>
+        <div class="foot">
+            <p>copyright &copy;2021 CEEP Services designed by <span>167,172</span></p>
+        </div>
+    </footer>
+    <script>
+        function Confirm() {
+            var con = confirm("If you are admin click ok");
+            if (con != false) {
+                window.location.replace("http://localhost/sem3MiniProject/Admin_page.php");
+            }
+            else {
+                wnidow.location.replace("dummy_home.html");
+            }
+        }
+        function Confirm_register() {
+            var con1 = confirm("If you are unemployed and want to work as service man click ok");
+            if (con1 !== false) {
+                window.location.replace("http://localhost/sem3MiniProject/Register_unemployed.php");
+            }
+            else {
+                window.location.replace("dummy_home.html");
+            }
+        }
+    </script>
+</body>
+
+</html>
